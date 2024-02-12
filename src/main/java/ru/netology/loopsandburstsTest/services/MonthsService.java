@@ -8,7 +8,7 @@ public class MonthsService {
             if (money >= threshold) { // можем ли отдыхать?
                 months++; // увеличиваем счётчик месяцев отдыха
 
-                money = (income - expenses)/ 3;
+                money = (income - expenses) / 3;
 
             } else {
                 money += income;
