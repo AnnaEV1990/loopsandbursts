@@ -12,10 +12,10 @@ public class MonthServiceTest {
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/data.csv")
 
-    public void calculationOfTheNumberOfMonthsPerYear(int expected, int income, int expenses) {
+    public void calculationOfTheNumberOfMonthsPerYear(int expected, int income, int expenses, int threshold) {
         MonthsService service = new MonthsService();
 
-        int actual = service.calculate(income, expenses);
+        int actual = service.calculate(income, expenses, threshold);
         Assertions.assertEquals(expected, actual);
 
 
