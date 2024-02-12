@@ -7,8 +7,9 @@ public class MonthsService {
         for (int month = 1; month <= 12; month++) {
             if (money >= threshold) { // можем ли отдыхать?
                 months++; // увеличиваем счётчик месяцев отдыха
-                money -= expenses;
-                money -= expenses * 3;
+
+                money = (income + threshold - expenses)/ 3;
+
             } else {
                 money += income;
                 money -= expenses;
